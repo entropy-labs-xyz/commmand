@@ -1,9 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+:root {
+  font-size: 62.5%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+
+  color: #ffffff;
+}
+
+h1 {
+  font-family: "Recursive", monospace;
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt),
+    var(--CRSV);
+
+  --mono: "MONO" 0;
+
+  /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+  --casl: "CASL" 0.5;
+
+  /* Casual: Linear to Casual */
+  --wght: "wght" 700;
+
+  /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+  --slnt: "slnt" 0;
+
+  /* Slant: 0 to -15 degrees, auto cursive at -14 */
+  --CRSV: "CRSV" 0.5;
+
+  font-size: 5.4rem !important;
+}
+
+p {
+  font-size: 1.6rem !important;
 }
 
 a {
@@ -13,4 +51,57 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.signupForm > input{
+  color: #FFFFFF;
+  border-radius: 14px 0 0 14px;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  .signupForm > input{
+    width: 160px;
+  }
+}
+
+.signupForm > button{
+  border-radius: 0 14px 14px 0;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.signupForm > input, button{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  height: 44px;
+  border: none;
+  padding: 8px 16px;
+  outline: none;
+  border: 2px solid #FFFFFF;
+  
+}
+
+.signupForm{
+  position: absolute;
+  bottom: 25vh;
+  height: 100px;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  border: 2px solid aqua;
+  -webkit-text-fill-color: aqua;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  background: transparent;
 }
