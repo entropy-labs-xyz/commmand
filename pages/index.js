@@ -102,7 +102,7 @@ export default function Home() {
         <p className={styles.description}>Powerful project management</p>
 
         <Mailchimp
-        action='https://evanaubrey.us16.list-manage.com/subscribe/post?u=a85901bf3bba319d537c6f2ac&amp;id=38d0ade230'
+        action='https://evanaubrey.us17.list-manage.com/subscribe/post?u=a85901bf3bba319d537c6f2ac&amp;id=38d0ade230'
         fields={[
           {
             name: 'EMAIL',
@@ -127,13 +127,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           Created by &nbsp;<a href="#">Entropy Labs</a>
-        </a>
       </footer>
     </div>
   );
