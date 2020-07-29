@@ -2,12 +2,9 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import * as React from "react";
 
-import Mailchimp from 'react-mailchimp-form'
-
-
+import Mailchimp from "react-mailchimp-form";
 
 export default function Home() {
-
   if (typeof window !== "undefined") {
     window.addEventListener("deviceorientation", handleOrientation, true);
   }
@@ -24,14 +21,14 @@ export default function Home() {
       `scale(2 2) translate(-${percentage} 0)`
     );
   }
-  
+
   function handleOrientation(event) {
     var absolute = event.absolute;
     var alpha = event.alpha;
     var beta = event.beta;
     var gamma = event.gamma;
     var ballPos = (gamma / 90) * 100;
-  
+
     const percentage = ballPos / 100;
     holographicElement.setAttribute(
       "gradientTransform",
@@ -39,14 +36,26 @@ export default function Home() {
     );
     //console.log(ballPos);
   }
-  
-
 
   return (
     <div className={styles.container} onMouseMove={handleMouseMove}>
       <Head>
         <title>Commmand</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Commmand" />
+        <meta
+          property="og:description"
+          content="Powerful project management"
+        />
+        <meta
+          property="og:image"
+          content="https://commmand.entropylabs.xyz/og-image.png"
+        />
+        <meta
+          property="og:url"
+          content="https://commmand.entropylabs.xyz/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <main className={styles.main}>
@@ -102,32 +111,29 @@ export default function Home() {
         <p className={styles.description}>Powerful project management</p>
 
         <Mailchimp
-        action='https://evanaubrey.us17.list-manage.com/subscribe/post?u=a85901bf3bba319d537c6f2ac&amp;id=38d0ade230'
-        fields={[
-          {
-            name: 'EMAIL',
-            placeholder: 'Email',
-            type: 'email',
-            required: true
-          }
-        ]}
-        messages = {
-          {
+          action="https://evanaubrey.us17.list-manage.com/subscribe/post?u=a85901bf3bba319d537c6f2ac&amp;id=38d0ade230"
+          fields={[
+            {
+              name: "EMAIL",
+              placeholder: "Email",
+              type: "email",
+              required: true,
+            },
+          ]}
+          messages={{
             sending: "Sending...",
             success: "Thank you for subscribing!",
             error: "An unexpected internal error has occurred.",
             empty: "You must write an e-mail.",
             duplicate: "Too many subscribe attempts for this email address",
-            button: "Join Waitlist"
-          }
-        }
-        className="signupForm"
+            button: "Join Waitlist",
+          }}
+          className="signupForm"
         />
-        
       </main>
 
       <footer className={styles.footer}>
-          Created by &nbsp;<a href="#">Entropy Labs</a>
+        Created by &nbsp;<a href="#">Entropy Labs</a>
       </footer>
     </div>
   );
