@@ -66,7 +66,7 @@ a {
 }
 
 .msg-alert > p{
-  color: aqua !important;
+  color: #A0E8FF !important;
   text-align: center;
 }
 
@@ -74,7 +74,19 @@ a {
 .signupForm > button{
   border-radius: 0 14px 14px 0;
   cursor: pointer;
-  background: #FFFFFF;
+  background: rgba(160, 232, 255, 0.2);
+  color: #A0E8FF;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.signupForm > button:hover{
+  background-color: #A0E8FF;
+  color: #000000;
+}
+
+.signupForm > input{
+  background: #202020;
 }
 
 .signupForm > input, button{
@@ -84,8 +96,6 @@ a {
   border: none;
   padding: 8px 16px;
   outline: none;
-  border: 2px solid #FFFFFF;
-  
 }
 
 .signupForm{
